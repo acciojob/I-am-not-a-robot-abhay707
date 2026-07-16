@@ -6,7 +6,8 @@ let verifyPara = document.getElementById("para");
 
 let randomImg = Math.floor(Math.random() * 5) + 1;
 
-images.innerHTML += `<img class="img${randomImg}"/>`
+const duplicate = document.querySelector(`.img${randomImg}`).cloneNode(true);
+images.appendChild(duplicate)
 
 let imageClicked = [];
 
